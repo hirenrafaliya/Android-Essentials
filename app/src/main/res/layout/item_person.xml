@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_8sdp"
+    android:id="@+id/cardParent"
+    app:cardElevation="@dimen/_8sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Person Name"
+        android:textSize="@dimen/_14sdp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/colorPrimaryBlack"
+        android:layout_margin="@dimen/_2sdp"
+        android:id="@+id/tvName"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:textSize="@dimen/_12sdp"
+        android:text="personEmail@gmail.com"
+        android:layout_margin="@dimen/_2sdp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/colorSecondaryBlack"
+        android:id="@+id/tvEmail"
+        />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
