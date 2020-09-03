@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardParent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="@dimen/_8sdp"
-    android:id="@+id/cardParent"
     app:cardElevation="@dimen/_8sdp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_8sdp"
-        >
+        android:layout_margin="@dimen/_8sdp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Person Name"
-        android:textSize="@dimen/_14sdp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:textColor="@color/colorPrimaryBlack"
-        android:layout_margin="@dimen/_2sdp"
-        android:id="@+id/tvName"
-        />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:src="@drawable/ic_launcher_background" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvName"
-        android:textSize="@dimen/_12sdp"
-        android:text="personEmail@gmail.com"
-        android:layout_margin="@dimen/_2sdp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:textColor="@color/colorSecondaryBlack"
-        android:id="@+id/tvEmail"
-        />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Person Name"
+            android:textColor="@color/colorPrimaryBlack"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_below="@+id/tvName"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="personEmail@gmail.com"
+            android:textColor="@color/colorSecondaryBlack"
+            android:textSize="@dimen/_12sdp" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

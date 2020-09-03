@@ -1,5 +1,6 @@
 package com.example.androidessentials.Model
 
-data class Person(val name:String,val email:String){
-
-}
+data class Person(
+        val name: String,
+        val email: String,
+        val image: String)

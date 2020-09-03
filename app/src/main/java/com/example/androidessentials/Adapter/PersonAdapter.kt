@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.androidessentials.Model.Person
 import com.example.androidessentials.R
 import kotlinx.android.synthetic.main.item_person.view.*
@@ -34,12 +35,17 @@ class PersonAdapter
         val name = itemView.tvName
         val email = itemView.tvEmail
         val cardParent=itemView.cardParent
+        val imgProfile=itemView.imgProfile
+        val animation=AnimationUtils.loadAnimation(itemView.context,R.anim.anim_recycle_scale)
 
         fun bind(person: Person) {
             name.text = person.name
             email.text = person.email
 
-            val animation=AnimationUtils.loadAnimation(itemView.context,R.anim.anim_recycle_scale)
+            Glide.with(itemView.context)
+                    .load(person.image)
+                    .into(imgProfile)
+
             cardParent.startAnimation(animation)
         }
     }
